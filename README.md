@@ -31,35 +31,35 @@ Requirements:
 <li>Username, Profile picture and the ability to hide or display contact information</li>
 </ul>
 
-User Purpose:
-Upon entry to our website, users will first see the blog post home page.
-Through this website, users will be able to read various blog posts without being required to log in. 
-Users will be able to register / sign in. 
-To register, users will have to submit a form with their name, email, and password confirmation. They will have to accept the terms & conditions of our website. 
-Registered users will be able to:
-Create their own blog posts.
-Edit / delete their blog posts.
-Comment on their own and on others blog posts.
-Registered users will have a profile page:
-With a dashboard of their blog posts. 
-A notifications section that notifies them of the comments that have been made on their posts, or replies to their comments on others posts. 
-A settings section where they can view and make edits to their name, email, password. 
-This section will also include a privacy policy or a terms & conditions document as a review to what the user accepted when they first registered.
+User Purpose: <br>
+<li>Upon entry to our website, users will first see the blog post home page.</li>
+<li>Through this website, users will be able to read various blog posts without being required to log in. </li>
+<li>Users will be able to register / sign in. </li>
+<li>To register, users will have to submit a form with their name, email, and password confirmation. They will have to accept the terms & conditions of our website. </li>
+<li>Registered users will be able to:</li>
+<li>Create their own blog posts.</li>
+<li>Edit / delete their blog posts.</li>
+<li>Comment on their own and on others blog posts.</li>
+<li>Registered users will have a profile page:</li>
+<li>With a dashboard of their blog posts. </li>
+<li>A notifications section that notifies them of the comments that have been made on their posts, or replies to their comments on others posts. </li>
+<li>A settings section where they can view and make edits to their name, email, password. </li>
+<li>This section will also include a privacy policy or a terms & conditions document as a review to what the user accepted when they first registered.</li>
 
 
-Administrative Purpose:
-Dedicated admin page
-Only visible with certain permissions
-Easy to understand display of analytical data
-Tracking of site usage and user interactions
-Ability to remove posts
-Admins will also be able to remove only certain sections of posts
-Ability to remove users
-Ability to remove comments
-Assign users certain privileges
-Edit site settings
-Can add content to all pages
-View all registered users and there non-sensitive information
+Administrative Purpose: <br>
+<li>Dedicated admin page</li>
+<li>Only visible with certain permissions</li>
+<li>Easy to understand display of analytical data</li>
+<li>Tracking of site usage and user interactions</li>
+<li>Ability to remove posts</li>
+<li>Admins will also be able to remove only certain sections of posts</li>
+<li>Ability to remove users</li>
+<li>Ability to remove comments</li>
+<li><li><li>Assign users certain privileges</li>
+<li><li>Edit site settings</li>
+<li>Can add content to all pages</li>
+<li>View all registered users and there non-sensitive information</li>
 
 
      
