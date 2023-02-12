@@ -38,7 +38,7 @@ User Purpose: <br>
 <li>Through this website, users will be able to read various blog posts without being required to log in. </li>
 <li>Users will be able to register / sign in. </li>
 <li>To register, users will have to submit a form with their name, email, and password confirmation. They will have to accept the terms & conditions of our website. </li>
-<li>Registered users will be able to:</li>
+Registered users will be able to:
 <li>Create their own blog posts.</li>
 <li>Edit / delete their blog posts.</li>
 <li>Comment on their own and on others blog posts.</li>
