@@ -30,8 +30,10 @@ Requirements:
 <li>User profile with tracking and display of previous post interactions</li>
 <li>Username, Profile picture and the ability to hide or display contact information</li>
 </ul>
-
+<br>
+<br>
 User Purpose: <br>
+<ul>
 <li>Upon entry to our website, users will first see the blog post home page.</li>
 <li>Through this website, users will be able to read various blog posts without being required to log in. </li>
 <li>Users will be able to register / sign in. </li>
@@ -45,9 +47,12 @@ User Purpose: <br>
 <li>A notifications section that notifies them of the comments that have been made on their posts, or replies to their comments on others posts. </li>
 <li>A settings section where they can view and make edits to their name, email, password. </li>
 <li>This section will also include a privacy policy or a terms & conditions document as a review to what the user accepted when they first registered.</li>
-
+</ul>
+     <br>
+<br>
 
 Administrative Purpose: <br>
+<ul>
 <li>Dedicated admin page</li>
 <li>Only visible with certain permissions</li>
 <li>Easy to understand display of analytical data</li>
@@ -60,7 +65,7 @@ Administrative Purpose: <br>
 <li><li>Edit site settings</li>
 <li>Can add content to all pages</li>
 <li>View all registered users and there non-sensitive information</li>
-
+</ul
 
      
 
