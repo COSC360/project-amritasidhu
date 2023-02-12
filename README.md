@@ -4,29 +4,30 @@ Team members: Griffin Wilchuk(75303370) & Amrita Sidhu (85822294)
 Project: MyBlogPost
 Purpose: For our project, we will be creating a Blog Post website. This website will allow individuals to view blog posts of others without having to register. It will also allow individuals to register which will allow them to post blogs, edit, make comments on their own or other blog entries. Comments made on blogs will be updated synchronously. This will be a social platform as it will support multiple users. 
 Requirements: 
-Column style layout HTML document
-Ability for users to comment on posts
-Ability for users to like/dislike posts
-Forgot password system
-Data storage using MySQL
-Security precautions for stored data
-The use of AJAX for real time updating of the site and posts
-Server-side scripting done using PHP
-Form validation with JavaScript
-Liquid design to allow use on various sized monitors
-Error control and handling
-Ability for users to upload images 
-User profile data stored in database
-Straight forward navigation using the breadcrumb strategy
-Site will maintain state
-Proper and aesthetic grouping and display of different subsections
-Search ability 
-Search filters such as: Most recent, Most popular, Most active
-Pleasing and clean styling 
-Tracking and display of site usage for admin
-User profile with tracking and display of previous post interactions
-Username, Profile picture and the ability to hide or display contact information
-
+<ul>
+<li>Column style layout HTML document </li>
+<li>Ability for users to comment on posts </li>
+<li>Ability for users to like/dislike posts</li>
+<li>Forgot password system</li>
+<li>Data storage using MySQL</li>
+<li>Security precautions for stored data</li>
+<li>The use of AJAX for real time updating of the site and posts</li>
+<li>Server-side scripting done using PHP</li>
+<li>Form validation with JavaScript</li>
+<li>Liquid design to allow use on various sized monitors</li>
+<li>Error control and handling</li>
+<li>Ability for users to upload images </li>
+<li>User profile data stored in database</li>
+<li>Straight forward navigation using the breadcrumb strategy</li>
+<li>Site will maintain state</li>
+<li>Proper and aesthetic grouping and display of different subsections</li>
+<li>Search ability </li>
+<li>Search filters such as: Most recent, Most popular, Most active</li>
+<li>Pleasing and clean styling </li>
+<li>Tracking and display of site usage for admin</li>
+<li>User profile with tracking and display of previous post interactions</li>
+<li>Username, Profile picture and the ability to hide or display contact information</li>
+</ul>
 
 User Purpose:
 Upon entry to our website, users will first see the blog post home page.
