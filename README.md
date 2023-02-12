@@ -61,8 +61,8 @@ Administrative Purpose: <br>
 <li>Admins will also be able to remove only certain sections of posts</li>
 <li>Ability to remove users</li>
 <li>Ability to remove comments</li>
-<li><li><li>Assign users certain privileges</li>
-<li><li>Edit site settings</li>
+<li>Assign users certain privileges</li>
+<li>Edit site settings</li>
 <li>Can add content to all pages</li>
 <li>View all registered users and there non-sensitive information</li>
 </ul
