@@ -1,7 +1,7 @@
 COSC 360 Project Proposal
 
-Team members: Griffin Wilchuk(75303370) & Amrita Sidhu (85822294)<br>
-Project: MyBlogPost<br>
+Team members: Griffin Wilchuk(75303370) & Amrita Sidhu (85822294)<br><br>
+Project: MyBlogPost<br><br>
 Purpose: For our project, we will be creating a Blog Post website. This website will allow individuals to view blog posts of others without having to register. It will also allow individuals to register which will allow them to post blogs, edit, make comments on their own or other blog entries. Comments made on blogs will be updated synchronously. This will be a social platform as it will support multiple users. 
 <br>
 <br>
