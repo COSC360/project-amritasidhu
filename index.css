@@ -23,7 +23,7 @@
 }
 
 #toolBar{
-    background-color: grey;
+    background-color: #b0afae;
     padding: 2%;
     height: 100%;
     margin-left: -75px;
@@ -31,6 +31,41 @@
     margin-bottom: -100%;
   
 }
+
+#searchBar{
+    font-family: 'Indie Flower';
+    padding: 0%;
+    text-align: left;
+    
+    
+}
+
+#searchIcon{
+    float: left;
+    height: 30px;
+    padding-right: 5%;
+  
+   
+}
+
+#searchInput{
+    width: 70%;
+    border: 4px solid #83cde4;
+    border-radius: 4px;
+   
+}
+
+#searchTitle{
+    padding: 0%;
+    margin: 0%;
+    position: relative;
+    top: 1em;
+    font-size: large;
+    border-bottom: 2px solid black;
+    
+    
+}
+
 
 
 
