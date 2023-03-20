@@ -7,6 +7,7 @@
     font-size: 2em;
     font-family: 'Indie Flower';
     font-weight:900;
+    border-bottom: 4px solid #b0afae;
     
     
     
@@ -32,6 +33,10 @@
   
 }
 
+
+
+                                                /*SEARCH BAR*/
+
 #searchBar{
     font-family: 'Indie Flower';
     padding: 0%;
@@ -52,6 +57,7 @@
     width: 70%;
     border: 4px solid #83cde4;
     border-radius: 4px;
+    
    
 }
 
@@ -67,5 +73,85 @@
 }
 
 
+
+
+                                                /*BOOKMARKS*/
+
+#bookmarks{
+    margin-bottom: 20%;
+}
+
+#bookmarksTitle{
+    font-family: 'Indie Flower';
+    font-size: large;
+    border-bottom: 2px solid black;
+  width: 75%;
+   display: inline-block;
+    
+
+}
+#bookmarksIcon{
+    height: 30px;
+    
+  margin-right: 0%;
+  display: inline-block;
+}
+
+
+                                                /*Following*/
+#following{
+    margin-bottom: 20%;
+}
+
+#followingTitle{
+    font-family: 'Indie Flower';
+    font-size: large;
+    border-bottom: 2px solid black;
+  width: 75%;
+   display: inline-block;
+    
+
+}
+#followingIcon{
+    height: 30px;
+    
+  margin-right: 0%;
+  display: inline-block;
+}
+
+
+
+
+
+                                                /*Trending*/
+#trending{
+    margin-bottom: 20%;
+}
+
+#trendingTitle{
+    font-family: 'Indie Flower';
+    font-size: large;
+    border-bottom: 2px solid black;
+  width: 75%;
+   display: inline-block;
+    
+
+}
+#trendingIcon{
+    height: 30px;
+    
+  margin-right: 0%;
+  display: inline-block;
+}
+
+
+
+#yourPosts{
+    position: absolute;
+    font-family: 'Indie Flower';
+    text-decoration: underline;
+    left: 50%;
+    margin-top: 3%;
+}
 
 
