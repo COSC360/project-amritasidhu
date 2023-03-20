@@ -1,0 +1,36 @@
+#MainHeader{
+    background-color: #83cde4;
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Indie Flower';
+    font-weight:900;
+    
+    
+    
+}
+
+#profileLink{
+    float: right;
+    height: 60px;
+}
+
+#logo{
+    float: left;
+    height: 60px;
+}
+
+#toolBar{
+    background-color: grey;
+    padding: 2%;
+    height: 100%;
+    margin-left: -75px;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+  
+}
+
+
+
