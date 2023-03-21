@@ -8,8 +8,9 @@
     font-family: 'Indie Flower';
     font-weight:900;
     border-bottom: 4px solid #b0afae;
-    align-content: center;
-    align-items: center;
+    
+    
+    
 }
 
 #profileLink{
@@ -21,6 +22,9 @@
     float: left;
     height: 60px;
 }
+
+
+
 #body{
     margin-top: 3%;
     margin-left: 5%;
@@ -41,16 +45,20 @@
     font-size: large;
     font-weight: bold;
     border: 4px solid #b0afae;
+    background-color: #6ab4cb;
 }
 
-a:hover {
-        text-decoration: underline;
-      }
+
 
 a:link{
-    text-decoration: none;
+    
     color: black;
 }
+
+#link{
+    color: black;
+}
+
 
 .info{
     background-color: #6ab4cb;
@@ -58,21 +66,16 @@ a:link{
     margin-left: 15%;
     margin-right:15%;
     height: 350px;
-    /* padding-left: 5%; */
-    padding-top: 10%;
+    padding-left: 5%;
+    padding-top: 2%;
     font-family: 'Indie Flower';
     font-size: large;
     font-weight: bold;
     border: 4px solid #b0afae;
+}
+.terms{
     text-align: center;
-
 }
-.loginbtn{
-    margin-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 label{
     padding-bottom: 2%;
 }
