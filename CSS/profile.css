@@ -1,0 +1,104 @@
+#MainHeader{
+    background-color: #83cde4;
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Indie Flower';
+    font-weight:900;
+    border-bottom: 4px solid #b0afae;
+    align-content: center;
+    align-items: center;
+}
+
+#profileLink{
+    float: right;
+    height: 60px;
+}
+
+#logo{
+    float: left;
+    height: 60px;
+}
+#body{
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 87%;
+    height: 700px;
+    background-color: #83cde4;
+    border: 4px solid #b0afae;
+}
+
+.userName{
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right:45%;
+    height: 90px;
+    text-align: center;
+    font-family: 'Indie Flower';
+    font-size: large;
+    font-weight: bold;
+    border: 4px solid #b0afae;
+    
+}
+.name {
+    margin-top: 3%;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+a:link{
+    
+    color: black;
+}
+#link{
+    color: black;
+}
+
+.info{
+    background-color: #6ab4cb;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right:15%;
+    height: 360px;
+    /* padding-left: 5%; */
+    padding-top: 6%;
+    font-family: 'Indie Flower';
+    font-size: large;
+    font-weight: bold;
+    border: 4px solid #b0afae;
+    text-align: center;
+
+}
+.button{
+    margin-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.backButton{
+    font-family: 'Indie Flower';
+    font-size: large;
+    font-weight: bold;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.logOutBtn{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 6%;
+    margin-left: 2%;
+    margin-right:75%;
+}
+
+label{
+    padding-bottom: 2%;
+}
+
+.create{
+    text-decoration: none;
+}

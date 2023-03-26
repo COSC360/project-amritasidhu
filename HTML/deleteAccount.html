@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../JS/login.js"></script>
+    <script src="../JS/deleteAccount.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/profilePages.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Delete Account</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 </head>
 <body>
@@ -23,25 +23,19 @@
 
     <div class="row" >
         <div class="col-sm-12"  id="body">
-            <div class="choose">
-                <a href="url" class="signIn"id="link">Sign In</a> 
-               <img src="../images/verticalLine.png" alt="seperator" id="line">
-               <a href="../HTML/register.html" id="link" class="create">Create an Account</a>
-
+            <div>
+                <form class="">
+                    <input class = "backButton" type="backButton" value="<- Go Back" onclick="history.back()">
+                </form>
             </div>
 
             <div class="info">
-            <form name="loginForm" action="../PHP/login.php" onsubmit="return validateForm()" method="post" novalidate>
- 
-                <label for="Username"><b>Username</b></label>
-                <input type="text" placeholder="Enter a Username" name="username" id="username" required>
-                <br>
+            <form name="loginForm" action="../PHP/deleteAccount.php" onsubmit="return validateForm()" method="post" novalidate>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <p>Please confirm that you would like to delete your account by pressing the button below.</p>
                 <br>
                 
-                 <input type="submit" value="Submit" class="logInbtn"></input>
+                 <button>Confirm</button>
              </form>
             </div>   
         </div>
