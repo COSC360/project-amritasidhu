@@ -27,7 +27,10 @@
                     <p id="searchTitle">Search</p> 
                     <br>
                     <img src="../images/search.png" alt="logo" id="searchIcon">
-                    <input type="text" id="searchInput" placeholder="Search"/>
+                    <form name="search" action="../PHP/searchedUser.php" " method="post" novalidate>
+                    <input type="text" id="searchInput" placeholder="Search" name="search"/>
+                    <input type="submit" value="Submit" name="search" class="logInbtn"></input>
+                </form>
                 </div>
                 <br>
                 <div class="container" id="bookmarks"></div>
@@ -53,6 +56,53 @@
 
             <div class="col-sm-8" id="main">
                 <h3 id = "yourPosts">Your Posts</h3>
+
+
+
+                <!--
+                    PHP FOR GETTING LOGGED IN USERS POSTS TO DISPLAY ON HOME PAGE
+                <?php 
+                     if (isset($_COOKIE['username'])){
+                $user_name = $_COOKIE['username'];
+             }
+
+                
+                    $servername = "cosc360.ok.ubc.ca";
+                    $username = "75303370";
+                    $password = "75303370";
+                    $dbname = "db_75303370";
+                    
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                    } 
+                    
+                    $sql = "SELECT * users (password)
+                    WHERE username = $user_username;
+
+                    $sql = "SELECT body, title, dateCreated FROM posts where username = $user_name";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                    
+               
+                    while($row = $result->fetch_assoc()) {
+                        echo "'<div id = "post">
+                            <h4>'.$row['title'] .'</h4>
+                            <p>' .$row['body'] . '</p>.
+                            <p class ="date">' .$rows[dateCreated]. '</p>
+                            </div>'";
+                    
+                    $conn->close();
+                
+                ?>
+                -->
+
+
+
+
                     <div id = "post">
                         <h4>Lorem Impsum</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
