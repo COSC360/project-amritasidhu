@@ -2,12 +2,17 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $username = $_GET['username']; 
-        $password = $_GET['password'] ;
+        $user_username = $_GET['username']; 
+        $user_password = $_GET['password'] ;
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username']; 
-        $password = $_POST['password'] ;
+        $user_username = $_POST['username']; 
+        $user_password = $_POST['password'] ;
+    }
+
+    if (isset($_POST['login'])){
+        setcookie("username", $user_username,time() + 60*60*24*365);
+        setcookie("password", $user_password,time() + 60*60*24*365);
     }
 
 
@@ -24,10 +29,10 @@
     } 
     
     $sql = "SELECT FROM users (password)
-    WHERE username = $username;
+    WHERE username = $user_username;
 
-    if($sql == $password){
-        header("Location: https:"cosc360.ok.ubc.ca/gwilchuk/home.html");
+    if($sql == $user_password){
+        header("Location: https:"localhost:8082/project-amritasidhu/HTML/index.html");
         exit();
     }
     
@@ -41,11 +46,4 @@
     
     $conn->close();
   
-   
-    
-
-
-
-
-
 ?>

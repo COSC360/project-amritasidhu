@@ -2,22 +2,16 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $username = $_GET['username']; 
+        $user_username = $_GET['username']; 
         $email = $_GET['email'];
-        $password = $_GET['password'] ;
+        $user_password = $_GET['password'] ;
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username']; 
+        $user_username = $_POST['username']; 
         $email = $_POST['email'];
-        $password = $_POST['password'] ;
+        $user_password = $_POST['password'] ;
     }
 
-   
-
-    echo 'username: ' . $username;
-    echo ' email  ' . $email . "\n";
-
- 
 
     $servername = "cosc360.ok.ubc.ca";
     $username = "75303370";
@@ -32,7 +26,7 @@
     } 
     
     $sql = "INSERT INTO users (username, email, password)
-    VALUES ($username, $email, $password)";
+    VALUES ($user_username, $email, $user_password)";
     
     if ($conn->query($sql) === TRUE) {
       echo "User Registered!";

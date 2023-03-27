@@ -1,13 +1,18 @@
 #MainHeader{
     background-color: #83cde4;
+    
     padding: 2%;
     height: 100%;
-    width: 100%;
+   
     text-align: center;
     font-size: 2em;
     font-family: 'Indie Flower';
     font-weight:900;
     border-bottom: 4px solid #b0afae;
+    
+   
+
+    
     
     
     
@@ -30,6 +35,8 @@
     margin-left: -75px;
     padding-bottom: 100%;
     margin-bottom: -100%;
+    position: absolute;
+    left: 5%;
   
 }
 
@@ -152,6 +159,30 @@
     text-decoration: underline;
     left: 50%;
     margin-top: 3%;
+   
+}
+
+#post{
+    border:2px solid #b0afae ;
+   
+    position: relative;
+    font-family: 'Indie Flower';
+
+    left: 35%;
+    top: 30%;
+    background-color: #83cde4;
+    margin-top: 2%;
+   
+    
+}
+h4{
+    text-align: center;
+    text-decoration: underline;
+   
+}
+
+.date{
+    text-align: right;
 }
 
 
