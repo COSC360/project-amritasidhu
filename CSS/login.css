@@ -81,8 +81,22 @@ label{
 
 .signIn{
     text-decoration: underline black;
+    margin-left: 7%;
 }
 
 .create{
     text-decoration: none;
+}
+
+.adminLogIn{
+    margin-top: 3%;
+}
+
+.admin{
+    text-decoration: black;
+    /* padding-top: 20%; */
+    margin-left: 44%;
+    font-family: 'Indie Flower';
+    font-size: large;
+    font-weight: bold;
 }
