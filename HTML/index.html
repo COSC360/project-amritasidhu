@@ -59,33 +59,48 @@
 
 
 
-                <!--
-                    PHP FOR GETTING LOGGED IN USERS POSTS TO DISPLAY ON HOME PAGE
+                
+                  
                 <?php 
                      if (isset($_COOKIE['username'])){
                 $user_name = $_COOKIE['username'];
              }
 
                 
-                    $servername = "cosc360.ok.ubc.ca";
-                    $username = "75303370";
-                    $password = "75303370";
-                    $dbname = "db_75303370";
-                    
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                    // Check connection
-                    if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                    } 
-                    
-                    $sql = "SELECT * users (password)
-                    WHERE username = $user_username;
-
-                    $sql = "SELECT body, title, dateCreated FROM posts where username = $user_name";
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
+             $host = "localhost"; 
+             $database = "project"; 
+             $user = "webuser"; 
+             $password = "P@ssw0rd";
+             
+             
+             $connection = mysqli_connect($host, $user, $password, $database);
+             
+             
+             $error = mysqli_connect_error();
+             if($error != null)
+             {
+               $output = "<p>Unable to connect to database!</p>";
+               exit($output);
+             
+               
+             }else{
+                 $user_password_hash =  md5($userpassword);
+                 //good connection, so do you thing
+                 $sql = "SELECT title, body, date FROM posts WHERE username = '$user_username'";
+         
+                 echo $sql;
+             
+                 $results = mysqli_query($connection, $sql);
+             
+                 //and fetch requsults
+                 while ($row = mysqli_fetch_assoc($results))
+                 {
+             
+                 }
+             
+                 mysqli_free_result($results);
+                 mysqli_close($connection);
+             }
                     
                
                     while($row = $result->fetch_assoc()) {
@@ -94,11 +109,11 @@
                             <p>' .$row['body'] . '</p>.
                             <p class ="date">' .$rows[dateCreated]. '</p>
                             </div>'";
-                    
+                        }
                     $conn->close();
                 
                 ?>
-                -->
+               
 
 
 
