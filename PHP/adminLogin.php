@@ -12,10 +12,10 @@
     }
 
 
-    $servername = "localhost";
-    $username = "webuser";
-    $password = "p@ssw0rd";
-    $dbname = "project";
+    $host = "cosc360.ok.ubc.ca"; 
+    $database = "db_85822294"; 
+    $user = "85822294"; 
+    $password = "85822294";
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
