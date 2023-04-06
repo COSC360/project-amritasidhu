@@ -14,10 +14,10 @@
 
  
 
-    $host = "localhost"; 
-    $database = "project"; 
-    $user = "webuser"; 
-    $password = "P@ssw0rd";
+    $host = "cosc360.ok.ubc.ca"; 
+    $database = "db_85822294"; 
+    $user = "85822294"; 
+    $password = "85822294";
     
     
     $connection = mysqli_connect($host, $user, $password, $database);
