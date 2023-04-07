@@ -1,0 +1,221 @@
+#MainHeader{
+    background-color: #83cde4;
+    
+    padding: 2%;
+    height: 100%;
+   
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Indie Flower';
+    font-weight:900;
+    border-bottom: 4px solid #b0afae;
+    
+   
+
+    
+    
+    
+    
+}
+
+#profileLink{
+    float: right;
+    height: 60px;
+}
+
+#logo{
+    float: left;
+    height: 60px;
+}
+
+#toolBar{
+    background-color: #b0afae;
+    padding: 2%;
+    height: 100%;
+    margin-left: -75px;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    position: absolute;
+    left: 5%;
+  
+}
+
+
+
+                                                /*SEARCH BAR*/
+
+#searchBar{
+    font-family: 'Indie Flower';
+    padding: 0%;
+    text-align: left;
+    
+    
+}
+
+#searchIcon{
+    float: left;
+    height: 30px;
+    padding-right: 5%;
+  
+   
+}
+
+#searchInput{
+    width: 70%;
+    border: 4px solid #83cde4;
+    border-radius: 4px;
+    
+   
+}
+
+#searchTitle{
+    padding: 0%;
+    margin: 0%;
+    position: relative;
+    top: 1em;
+    font-size: large;
+    border-bottom: 2px solid black;
+    
+    
+}
+
+
+
+
+                                                /*BOOKMARKS*/
+
+#bookmarks{
+    margin-bottom: 20%;
+}
+
+#bookmarksTitle{
+    font-family: 'Indie Flower';
+    font-size: large;
+    border-bottom: 2px solid black;
+  width: 75%;
+   display: inline-block;
+    
+
+}
+#bookmarksIcon{
+    height: 30px;
+    
+  margin-right: 0%;
+  display: inline-block;
+}
+
+
+                                                /*Following*/
+#following{
+    margin-bottom: 20%;
+}
+
+#followingTitle{
+    font-family: 'Indie Flower';
+    font-size: large;
+    border-bottom: 2px solid black;
+  width: 75%;
+   display: inline-block;
+    
+
+}
+#followingIcon{
+    height: 30px;
+    
+  margin-right: 0%;
+  display: inline-block;
+}
+
+
+
+
+
+                                                /*Trending*/
+#trending{
+    margin-bottom: 20%;
+}
+
+#trendingTitle{
+    font-family: 'Indie Flower';
+    font-size: large;
+    border-bottom: 2px solid black;
+  width: 75%;
+   display: inline-block;
+    
+
+}
+#trendingIcon{
+    height: 30px;
+    
+  margin-right: 0%;
+  display: inline-block;
+}
+
+
+
+#yourPosts{
+    position: absolute;
+    font-family: 'Indie Flower';
+    text-decoration: underline;
+    left: 50%;
+    margin-top: 3%;
+   
+}
+
+#post{
+    border:2px solid #b0afae ;
+   
+    position: relative;
+    font-family: 'Indie Flower';
+
+    left: 35%;
+    top: 30%;
+    background-color: #83cde4;
+    margin-top: 2%;
+   
+    
+}
+#comments {
+    position: absolute;
+    font-family: 'Indie Flower';
+    text-decoration: underline;
+    
+    margin-top: 3%;
+    /* border:2px solid #b0afae ; */
+}
+#commentName {
+
+    position: absolute;
+    font-family: 'Indie Flower';
+    text-decoration: underline;
+    left: 10%;
+    margin-top: 3%;
+
+
+}
+#comment {
+
+    position: relative;
+    font-family: 'Indie Flower';
+    
+    left: 50%;
+    margin-top: 30%;
+
+
+}
+.form {
+    position: absolute;
+    font-family: 'Indie Flower';
+    left: 40%;
+    margin-top: 25%;
+
+}
+h4{
+    text-align: center;
+    text-decoration: underline;
+   
+}
+
+.date{
+    text-align: right;
+}

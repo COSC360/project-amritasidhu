@@ -16,10 +16,11 @@
     }
    
 
-    $host = "cosc360.ok.ubc.ca"; 
-    $database = "db_85822294"; 
-    $user = "85822294"; 
+    $host = "localhost";
+    $user = "85822294";
     $password = "85822294";
+    $database = "db_85822294";
+    
 
     
     $connection = mysqli_connect($host, $user, $password, $database);

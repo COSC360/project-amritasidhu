@@ -55,96 +55,53 @@
             </div>
 
             <div class="col-sm-8" id="main">
-                <h3 id = "yourPosts">Your Posts</h3>
-
-
-
-                
-<!--                   
-                <?php 
-                     if (isset($_COOKIE['username'])){
-                $user_name = $_COOKIE['username'];
-             }
-
-                
-             $host = "localhost"; 
-             $database = "project"; 
-             $user = "webuser"; 
-             $password = "P@ssw0rd";
+            <h3 id = "yourPosts">Your Posts</h3>  
+            <?php
+             $host = "localhost";
+             $user = "85822294";
+             $password = "85822294";
+             $database = "db_85822294";
              
-             
+         
+         
              $connection = mysqli_connect($host, $user, $password, $database);
-             
-             
+         
+         
              $error = mysqli_connect_error();
              if($error != null)
              {
                $output = "<p>Unable to connect to database!</p>";
                exit($output);
-             
-               
-             }else{
-                 $user_password_hash =  md5($userpassword);
-                 //good connection, so do you thing
-                 $sql = "SELECT title, body, date FROM posts WHERE username = '$user_username'";
          
-                 echo $sql;
-             
-                 $results = mysqli_query($connection, $sql);
-             
-                 //and fetch requsults
-                 while ($row = mysqli_fetch_assoc($results))
-                 {
-             
-                 }
-             
-                 mysqli_free_result($results);
-                 mysqli_close($connection);
+         
+             }else{
+
+            $sql = "SELECT * FROM posts";
+            $result = mysqli_query($connection, $sql);
+            while($row = mysqli_fetch_assoc($result)){
+            
+            $id = $row['id'];
+            $username = $row['username'];
+            $title = $row['title'];
+            $body = $row['body'];
+            $date = $row['dateCreated'];
+
+                echo '
+                <a href="../PHP/post.php">
+                    <div id = "post">
+                        <a href="../PHP/post.php?postID='. $id .'">
+                        <h4>'. $title .'</h4> 
+                        </a>
+                        <p>'. substr($body,0, 200) .'...</p>
+                            <p class = "date">'. $username .'</p>
+                             <p class = "date">'. $date .'</p>
+                        <button><a href="../PHP/post.php?postID='. $id .'"> View Post </a></button>
+                    </div>';
+            }
              }
-                    
-               
-                    while($row = $result->fetch_assoc()) {
-                        echo "'<div id = "post">
-                            <h4>'.$row['title'] .'</h4>
-                            <p>' .$row['body'] . '</p>.
-                            <p class ="date">' .$rows[dateCreated]. '</p>
-                            </div>'";
-                        }
-                    $conn->close();
-                
-                ?> -->
-               
 
-
-
-
-                    <div id = "post">
-                        <h4>Lorem Impsum</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                             <p class = "date">March 7th 2023</p>
-                    </div>
-
-                    <div id = "post">
-                        <h4>A poem</h4>
-                        <p>Massa ultricies mi quis hendrerit dolor magna eget.
-                             Amet purus gravida quis blandit. Adipiscing enim eu turpis egestas pretium aenean.
-                              Dignissim convallis aenean et tortor at risus. 
-                              Aliquam id diam maecenas ultricies mi eget mauris pharetra et. 
-                              Ultrices vitae auctor eu augue ut lectus arcu bibendum. Dignissim enim sit 
-                              amet venenatis urna cursus eget nunc scelerisque. Gravida dictum fusce ut placerat orci.
-                               Lectus urna duis convallis convallis tellus id. Fringilla est ullamcorper eget nulla facilisi. 
-                               At in tellus integer feugiat scelerisque varius morbi enim. Ut sem viverra aliquet eget.
-                                Morbi enim nunc faucibus a pellentesque sit amet porttitor eget.
-                                 Adipiscing elit pellentesque habitant morbi tristique senectus et.</p>
-                        <p class = "date">January 5th 2023</p>
-
-                    </div>
-
-
-
+            ?>
+            </div>
             </div>
         </div>
     </div>
