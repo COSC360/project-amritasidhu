@@ -13,9 +13,9 @@
     <div class="container-fluid">
         <div class="row" >
             <div class="col-sm-12"  id="MainHeader">
-                <a href="../HTML/index.html"><img src="../images/logo.png" alt="logo" id="logo"></a>
-                <a href="../HTML/profile.html"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
-                Bloogle! 
+                <a href="../HTML/admin.php"><img src="../images/logo.png" alt="logo" id="logo"></a>
+                <a href="../HTML/adminProfile.html"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
+                Bloogle! Admin Portal
             </div>
         </div>
     </div>
@@ -24,12 +24,22 @@
         <div class="row">
             <div class="col-sm-2" id="toolBar">
                 <div class="container" id = "searchBar">
-                    <p id="searchTitle">Search</p> 
+                    <p id="searchTitle">Search for User</p> 
                     <br>
                     <img src="../images/search.png" alt="logo" id="searchIcon">
-                    <form name="search" action="../PHP/searchedUser.php" " method="post" novalidate>
+                    <form name="searchUser" action="../PHP/searchedUserFunctionAdmin.php" " method="post" novalidate>
                     <input type="text" id="searchInput" placeholder="Search" name="search"/>
                     <input type="submit" value="Submit" name="search" class="logInbtn"></input>
+                </form>
+                </div>
+                <br>
+                <div class="container" id = "searchBar">
+                    <p id="searchTitle">Search for Topic</p> 
+                    <br>
+                    <img src="../images/search.png" alt="logo" id="searchIcon">
+                    <form name="searchTopic" action="../HTML/searchedTopicAdmin.php" " method="post" novalidate>
+                    <input type="text" id="searchInput" placeholder="Search" name="search"/>
+                    <input type="submit" value="Submit" name="submit" class="logInbtn"></input>
                 </form>
                 </div>
                 <br>
@@ -50,21 +60,28 @@
                 <img src="../images/trending.png" alt="trending" id="trendingIcon">
                 <p id="trendingTitle">Trending</p> 
                 </a>
+                <br>
+                <div class="container" id="trending"></div>
+                <a href="../HTML/newPost.html">
+                <p id="trendingTitle">New Post</p> 
+                </a>
             
                
-            </div>
+            </div>   
 
             <div class="col-sm-8" id="main">
-                <h3 id = "yourPosts">Your Posts</h3>
+                
 
 
 
                 
                   
-                <?php 
-                     if (isset($_COOKIE['username'])){
-                $user_name = $_COOKIE['username'];
-             }
+              <?php 
+              error_reporting(E_ALL);
+
+              ini_set('display_errors', '1');
+
+                 
 
                 
              $host = "localhost"; 
@@ -74,7 +91,11 @@
              
              
              $connection = mysqli_connect($host, $user, $password, $database);
-             
+
+             session_start();
+             $userId = $_SESSION["id"];
+             $searched_id = $_SESSION["searchedUserId"];
+             $searched_username =  $_SESSION["searched_username"];
              
              $error = mysqli_connect_error();
              if($error != null)
@@ -84,64 +105,48 @@
              
                
              }else{
-                 $user_password_hash =  md5($userpassword);
+                 
                  //good connection, so do you thing
-                 $sql = "SELECT title, body, date FROM posts WHERE username = '$user_username'";
+                 $sql = "SELECT title, body, date FROM posts WHERE userID = '$searched_id'";
          
-                 echo $sql;
+                
              
                  $results = mysqli_query($connection, $sql);
              
                  //and fetch requsults
-                 while ($row = mysqli_fetch_assoc($results))
-                 {
+                 
              
-                 }
-             
-                 mysqli_free_result($results);
-                 mysqli_close($connection);
+                 
              }
                     
-               
-                    while($row = $result->fetch_assoc()) {
-                        echo "'<div id = "post">
-                            <h4>'.$row['title'] .'</h4>
-                            <p>' .$row['body'] . '</p>.
-                            <p class ="date">' .$rows[dateCreated]. '</p>
-                            </div>'";
+             echo "<h3 id ='yourPosts'>" .$searched_username . " posts</h3>";
+
+             while ($row = mysqli_fetch_assoc($results)) {
+              
+                echo "<div id = 'post'>";
+                echo"<h4>".$row['title'] ."</h4>";
+                  echo "<p>" .$row['body'] . "</p>";
+                   echo "<p class ='date'>" .$row['date']. "</p>";
+                   echo "<form name='searchUser' action='../PHP/adminDeletePost.php'  method='post' novalidate> ";
+                   echo "<input type = 'hidden' name = 'title' value = " .$row['title']. ">";
+                 echo " <input type='submit' value='Delete' name='submit' class='logInbtn'></input> ";
+                 echo " </form> ";
+                  echo "</div>";
+                        
                         }
-                    $conn->close();
+
+                       
+                        mysqli_free_result($results);
+                        mysqli_close($connection);
                 
-                ?>
+                ?> 
+
+                   
                
 
 
 
 
-                    <div id = "post">
-                        <h4>Lorem Impsum</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                             <p class = "date">March 7th 2023</p>
-                    </div>
-
-                    <div id = "post">
-                        <h4>A poem</h4>
-                        <p>Massa ultricies mi quis hendrerit dolor magna eget.
-                             Amet purus gravida quis blandit. Adipiscing enim eu turpis egestas pretium aenean.
-                              Dignissim convallis aenean et tortor at risus. 
-                              Aliquam id diam maecenas ultricies mi eget mauris pharetra et. 
-                              Ultrices vitae auctor eu augue ut lectus arcu bibendum. Dignissim enim sit 
-                              amet venenatis urna cursus eget nunc scelerisque. Gravida dictum fusce ut placerat orci.
-                               Lectus urna duis convallis convallis tellus id. Fringilla est ullamcorper eget nulla facilisi. 
-                               At in tellus integer feugiat scelerisque varius morbi enim. Ut sem viverra aliquet eget.
-                                Morbi enim nunc faucibus a pellentesque sit amet porttitor eget.
-                                 Adipiscing elit pellentesque habitant morbi tristique senectus et.</p>
-                        <p class = "date">January 5th 2023</p>
-
-                    </div>
 
 
 

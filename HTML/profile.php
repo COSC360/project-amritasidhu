@@ -15,8 +15,8 @@
     <div class="container-fluid">
         <div class="row" >
             <div class="col-sm-12"  id="MainHeader">
-                <a href="../HTML/index.html"><img src="../images/logo.png" alt="logo" id="logo"></a>
-                <a href="../HTML/profile.html"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
+                <a href="../HTML/index.php"><img src="../images/logo.png" alt="logo" id="logo"></a>
+                <a href="../HTML/profile.php"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
                 Bloogle! 
             </div>
         </div>
@@ -36,13 +36,12 @@
 
             
             <div class="userName"> 
-           <!--- <?php 
-            if (isset($_COOKIE['username'])){
-                $user_name = $_COOKIE['username'];
-            }
-              echo  "<h1 class="name">$user_name</h1>"
-                ?>   --> 
-                <h1 class="name">Jane Doe</h1>
+            <?php 
+            
+                session_start();
+              echo "<h1 class ='name'>" .$_SESSION["username"]. "</h1>";
+                ?>   
+              
             </div>
 
             <div class="info">

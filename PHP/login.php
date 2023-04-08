@@ -1,66 +1,88 @@
+<html>
+
+
 <?php
 
 
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $user_username = $_GET['username']; 
-        $user_password = $_GET['psw'] ;
-    }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $user_username = $_POST['username']; 
-        $user_password = $_POST['psw'] ;
-    }
-
-    if (isset($_POST['login'])){
-        setcookie("username", $user_username,time() + 60*60*24*365);
-        setcookie("password", $user_password,time() + 60*60*24*365);
-    }
-   
-
-    $host = "cosc360.ok.ubc.ca"; 
-    $database = "db_85822294"; 
-    $user = "85822294"; 
-    $password = "85822294";
-
-    
-    $connection = mysqli_connect($host, $user, $password, $database);
-    
-    
-    
-    $error = mysqli_connect_error();
-    if($error != null)
-    {
-      $output = "<p>Unable to connect to database!</p>";
-      exit($output);
-    
-      
-    }else{
-      $sql = "SELECT password, username FROM users WHERE username = '$user_username'";
-    $results = mysqli_query($connection, $sql);
 
 
-    $hashCheck = md5($user_password);
+error_reporting(E_ALL);
 
-    if ($results->num_rows > 0) {
-      // output data of each row
-      while ($row = mysqli_fetch_assoc($results)){
-        $check = $row['password'];
-       
-        
-        if($row["password"] == $hashCheck){
-       header("Location: http://localhost:8082/project-amritasidhu/HTML/index.html");
-        
-        }
-      }
-    }
-    
-  }
-
-    if ($conn->query($sql) === TRUE) {
-      echo "User Registered!";
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    
-    $conn->close();
+ini_set('display_errors', '1');
+if ($_SERVER['REQUEST_METHOD'] === 'GET'){
   
+}
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username']; 
+    $user_password = $_POST['psw'] ;
+}
+
+
+
+$host = "localhost"; 
+$database = "project"; 
+$user = "webuser"; 
+$password = "P@ssw0rd";
+
+
+$connection = mysqli_connect($host, $user, $password, $database);
+
+
+$error = mysqli_connect_error();
+if($error != null)
+{
+  $output = "<p>Unable to connect to database!</p>";
+  exit($output);
+  
+}
+else
+{
+    $user_password_hashed =  md5($user_password);
+    //good connection, so do you thing
+    $sql = "SELECT password, username, id FROM users WHERE username = '$username'";
+
+
+
+    $results = mysqli_query($connection, $sql) or die("<p color=\"#f00\">Could not fetch assoc array in database.</p>");
+  
+    $rowcount=mysqli_num_rows($results);
+
+
+    if($rowcount == 0){
+             
+      echo("<h1> Username/Password does not exist");
+      echo("<h4> Please try again </h4>");
+      echo("<a href='http://localhost:8082/project-amritasidhu/HTML/login.html'>Try Again</a>");
+    }
+
+    while ($row = mysqli_fetch_assoc($results))
+        {
+        $check = $row['password'];
+
+
+
+        if($check == $user_password_hashed){
+          session_start();
+          $_SESSION["username"]=$username;
+          $_SESSION["id"] = $row['id'];
+          $_SESSION["password"] = $user_password;
+
+          header("Location: http://localhost:8082/project-amritasidhu/HTML/index.php");
+        }else{
+          
+          echo("<h1> Username/Password does not exist");
+          echo("<h4> Please try again </h4>");
+          echo("<a href='http://localhost:8082/project-amritasidhu/HTML/login.html'>Try Again</a>");
+      
+        }
+
+       
+    }
+
+    mysqli_free_result($results);
+    mysqli_close($connection);
+}
 ?>
+</html>

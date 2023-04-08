@@ -15,7 +15,7 @@
         <div class="row" >
             <div class="col-sm-12"  id="MainHeader">
                 <a href="../HTML/index.html"><img src="../images/logo.png" alt="logo" id="logo"></a>
-                <a href="../HTML/profile.html"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
+                <a href="../HTML/profile.php"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
                 Bloogle! 
             </div>
         </div>
@@ -32,10 +32,14 @@
             <div class="info">
             <form name="loginForm" action="../PHP/deleteAccount.php" onsubmit="return validateForm()" method="post" novalidate>
 
-                <p>Please confirm that you would like to delete your account by pressing the button below.</p>
-                <br>
+                <p>Please Enter your Password to Delete your Account</p>
                 
-                 <button>Confirm</button>
+                <p>This Action is Permanent and Irreversible</p>
+                <br>
+                <label for="psw"><b>Enter your Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="pswOld" id="psw" required>
+                <br>
+                <input type="submit" value="Submit" class="button"></input>
              </form>
             </div>   
         </div>

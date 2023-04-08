@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
-    <link rel="stylesheet" href="../CSS/indexStyle.css">
+    <link rel="stylesheet" href="../CSS/newPost.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
@@ -13,8 +13,8 @@
     <div class="container-fluid">
         <div class="row" >
             <div class="col-sm-12"  id="MainHeader">
-                <a href="../HTML/index.html"><img src="../images/logo.png" alt="logo" id="logo"></a>
-                <a href="../HTML/profile.html"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
+                <a href="../HTML/index.php"><img src="../images/logo.png" alt="logo" id="logo"></a>
+                <a href="../HTML/profile.php"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
                 Bloogle! 
             </div>
         </div>
@@ -50,57 +50,47 @@
                 <img src="../images/trending.png" alt="trending" id="trendingIcon">
                 <p id="trendingTitle">Trending</p> 
                 </a>
+                <br>
+                <div class="container" id="trending"></div>
+                <a href="../HTML/newPost.html">
+                <p id="trendingTitle">New Post</p> 
+                </a>
             
                
             </div>
 
             <div class="col-sm-8" id="main">
+             
+
+
+
                 
-
-
-
-                <!--
-                    PHP FOR GETTING LOGGED IN USERS POSTS TO DISPLAY ON HOME PAGE
-                <?php 
-                     if (isset($_COOKIE['username'])){
-                $user_name = $_COOKIE['username'];
-             }
-                    $searched_user = $_COOKIE["searched_user"];
+                  
+    
                
-                    $servername = "cosc360.ok.ubc.ca";
-                    $username = "75303370";
-                    $password = "75303370";
-                    $dbname = "db_75303370";
-                    
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                    // Check connection
-                    if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                    } 
-                    
-                    $
-
-                    $sql = "SELECT body, title, dateCreated FROM posts where username = $searched_user";
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
-                    
-               
-                    while($row = $result->fetch_assoc()) {
-                        echo "'<h3 id = "yourPosts">'.$searched_user.'</h3>
-                        <div id = "post">
-                            <h4>'.$row['title'] .'</h4>
-                            <p>' .$row['body'] . '</p>.
-                            <p class ="date">' .$rows[dateCreated]. '</p>
-                            </div>'";
-                    
-                    $conn->close();
-                
-                ?>
-                -->
 
 
+
+
+                    <div id = "post">
+                        <h4>Create a New Post!</h4>
+                        <div class="info">
+                            <form name="registerForm" action = "../PHP/newPost.php"  method="post" novalidate>
+                                <div id = titleEntry>
+                                <label for="title"><b>Title</b></label>
+                                <br>
+                                <input type="text" placeholder="Enter a Title" name="title" id="title" required>
+                            </div>
+                                <br>
+                                <label id = "contentTitle" for="body"><b>Content</b></label>
+                                <br>
+                                <textarea name="body" id="body"  rows="10" cols="100"> </textarea>
+                                </div>
+                                <hr>
+                                <input type="submit" value="Submit" class="registerbtn"></input>
+                            </form>
+                                </div>
+                    </div>
 
 
 

@@ -1,26 +1,27 @@
 <?php
+session_start();
 error_reporting(E_ALL);
 
 ini_set('display_errors', '1');
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $user_username = $_GET['username']; 
-        $email = $_GET['email'];
-        $userpassword = $_GET['psw'] ;
+        $title = $_POST['title']; 
+        $body = $_POST['body'];
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $user_username = $_POST['username']; 
-        $email = $_POST['email'];
-        $userpassword = $_POST['psw'];
+        $title = $_POST['title']; 
+        $body = $_POST['body'];
+       
     }
 
- 
+    echo("<h1> PISS </h1>");
 
     $host = "localhost"; 
     $database = "project"; 
     $user = "webuser"; 
     $password = "P@ssw0rd";
 
+    $userId = $_SESSION['id'];
 
     $connection = mysqli_connect($host, $user, $password, $database);
     
@@ -33,16 +34,19 @@ ini_set('display_errors', '1');
     
       
     }else{
-        $user_password_hash =  md5($userpassword);
+        
         //good connection, so do you thing
-        $sql = "INSERT INTO users (username, Email, password) VALUES ('$user_username', '$email', '$user_password_hash')";
+        $sql = "INSERT INTO posts (title, body, userID) VALUES ('$title', '$body', '$userId')";
 
-        echo $sql;
-    
+
         $results = mysqli_query($connection, $sql);
     
+        //and fetch requsults
         
-        header("Location: http://localhost:8082/project-amritasidhu/HTML/login.html");
+        header("Location: http://localhost:8082/project-amritasidhu/HTML/newPost.html");
+        
+        
+    
         mysqli_free_result($results);
         mysqli_close($connection);
     }

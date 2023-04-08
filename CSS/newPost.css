@@ -161,7 +161,6 @@
     text-decoration: underline;
     left: 50%;
     margin-top: 3%;
-   float: right;
    
 }
 
@@ -188,4 +187,24 @@ h4{
     text-align: right;
 }
 
+#title{
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+#titleEntry{
+    text-align: center;
+   
+}
+
+#body{
+    left: 7%;
+    position: relative;
+}
+
+#contentTitle{
+    left: 45%;
+    position: relative;
+}
 
