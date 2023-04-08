@@ -61,7 +61,7 @@
             <div id="post">
 
             <?php
-            $host = "localhost";
+            $host = "cosc360.ok.ubc.ca";
             $user = "85822294";
             $password = "85822294";
             $database = "db_85822294";
@@ -108,10 +108,10 @@
 
             <h3 id = "yourPosts">Your Posts</h3>  
             <?php
-             $host = "localhost";
-             $user = "85822294";
-             $password = "85822294";
-             $database = "db_85822294";
+            $host = "cosc360.ok.ubc.ca";
+            $user = "85822294";
+            $password = "85822294";
+            $database = "db_85822294";
              
          
          
@@ -135,7 +135,7 @@
             $username = $row['username'];
             $title = $row['title'];
             $body = $row['body'];
-            $date = $row['dateCreated'];
+            $date = $row['date'];
 
                 echo '
                 <a href="../PHP/post.php">

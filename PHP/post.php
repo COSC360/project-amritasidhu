@@ -15,13 +15,9 @@
     <div class="container-fluid">
         <div class="row" >
             <div class="col-sm-12"  id="MainHeader">
-<<<<<<< Updated upstream
-                <a href="../HTML/index.html"><img src="../images/logo.png" alt="logo" id="logo"></a>
-                <a href="../HTML/profile.html"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
-=======
+
                 <a href="../HTML/index.php"><img src="../images/logo.png" alt="logo" id="logo"></a>
                 <a href="../HTML/profile.php"><img src="../images/profile.png" alt="profile" id="profileLink"></a>
->>>>>>> Stashed changes
                 Bloogle! 
             </div>
         </div>
@@ -31,7 +27,7 @@
         <div class="row">
             <div class="col-sm-2" id="toolBar">
                 <div class="container" id = "searchBar">
-<<<<<<< Updated upstream
+<!-- <<<<<<< Updated upstream
                     <p id="searchTitle">Search</p> 
                     <br>
                     <img src="../images/search.png" alt="logo" id="searchIcon">
@@ -58,7 +54,7 @@
                 <img src="../images/trending.png" alt="trending" id="trendingIcon">
                 <p id="trendingTitle">Trending</p> 
                 </a>
-=======
+======= -->
                 <p id="searchTitle">Search for User</p> 
                     <br>
                     <img src="../images/search.png" alt="logo" id="searchIcon">
@@ -79,7 +75,7 @@
                 </div>
                 <br>
                 
->>>>>>> Stashed changes
+
             
                
             </div>
@@ -92,24 +88,19 @@
             <div id = "post">
 
             <?php
-             $host = "localhost";
-             $user = "85822294";
-             $password = "85822294";
-             $database = "db_85822294";
-<<<<<<< Updated upstream
-             
-=======
->>>>>>> Stashed changes
+            $host = "cosc360.ok.ubc.ca";
+            $user = "85822294";
+            $password = "85822294";
+            $database = "db_85822294";
+
          
          
              $connection = mysqli_connect($host, $user, $password, $database);
          
-<<<<<<< Updated upstream
+
              $userID = 1;
-=======
-             session_start();
-             $userID = $_SESSION["id"];
->>>>>>> Stashed changes
+
+
              $error = mysqli_connect_error();
              if($error != null)
              {
@@ -145,14 +136,11 @@
              <!-- step 1)check if user has liked post from db: -->
 
              <?php
-<<<<<<< Updated upstream
-             $host = "localhost";
-=======
-               $host = "localhost";
->>>>>>> Stashed changes
-             $user = "85822294";
-             $password = "85822294";
-             $database = "db_85822294";
+
+            $host = "cosc360.ok.ubc.ca";
+            $user = "85822294";
+            $password = "85822294";
+            $database = "db_85822294";
              
          
          
@@ -232,17 +220,12 @@
             <!-- comments: -->
             <h3>Add a comment: </h3>
             <?php
-<<<<<<< Updated upstream
-            $host = "localhost";
+
+            $host = "cosc360.ok.ubc.ca";
             $user = "85822294";
             $password = "85822294";
             $database = "db_85822294";
-=======
-            $host = "localhost"; 
-            $database = "project"; 
-            $user = "webuser"; 
-            $password = "P@ssw0rd";
->>>>>>> Stashed changes
+
             
         
         
@@ -283,14 +266,11 @@
 
             <h3>Comments: </h3>
             <?php 
-<<<<<<< Updated upstream
-             $host = "localhost";
-=======
-               $host = "localhost";
->>>>>>> Stashed changes
-             $user = "85822294";
-             $password = "85822294";
-             $database = "db_85822294";
+
+            $host = "cosc360.ok.ubc.ca";
+            $user = "85822294";
+            $password = "85822294";
+            $database = "db_85822294";
 
              $connection = mysqli_connect($host, $user, $password, $database);
 

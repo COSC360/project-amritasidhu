@@ -14,7 +14,7 @@
 
  
 
-    $host = "localhost";
+    $host = "cosc360.ok.ubc.ca";
     $user = "85822294";
     $password = "85822294";
     $database = "db_85822294";

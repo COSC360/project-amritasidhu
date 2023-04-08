@@ -16,10 +16,10 @@ ini_set('display_errors', '1');
 
    
 
-    $host = "localhost"; 
-    $database = "project"; 
-    $user = "webuser"; 
-    $password = "P@ssw0rd";
+    $host = "cosc360.ok.ubc.ca";
+    $user = "85822294";
+    $password = "85822294";
+    $database = "db_85822294";
 
     $userId = $_SESSION['id'];
 
@@ -36,14 +36,14 @@ ini_set('display_errors', '1');
     }else{
         
         //good connection, so do you thing
-        $sql = "INSERT INTO posts (title, body, userID) VALUES ('$title', '$body', '$userId')";
+        $sql = "INSERT INTO posts (title, body, id) VALUES ('$title', '$body', '$userId')";
 
 
         $results = mysqli_query($connection, $sql);
     
         //and fetch requsults
         
-        header("Location: http://localhost:8082/project-amritasidhu/HTML/index.php");
+        header("Location: https://cosc360.ok.ubc.ca/amrita29/project-amritasidhu/HTML/index.php");
         
         
     

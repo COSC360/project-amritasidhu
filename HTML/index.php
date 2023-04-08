@@ -56,10 +56,10 @@
             <div id="post">
 
             <?php
-            $host = "localhost"; 
-            $database = "project"; 
-            $user = "webuser"; 
-            $password = "P@ssw0rd";
+    $host = "localhost";
+    $user = "85822294";
+    $password = "85822294";
+    $database = "db_85822294";
 
             $connection = mysqli_connect($host, $user, $password, $database);
         
@@ -106,10 +106,10 @@
             <h3 id = "yourPosts">Your Posts</h3>  
             <?php
              
-            $host = "localhost"; 
-            $database = "project"; 
-            $user = "webuser"; 
-            $password = "P@ssw0rd";
+             $host = "localhost";
+             $user = "85822294";
+             $password = "85822294";
+             $database = "db_85822294";
             session_start();
             $uid = $_SESSION["id"];
          
