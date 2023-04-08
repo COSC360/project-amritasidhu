@@ -55,6 +55,57 @@
             </div>
 
             <div class="col-sm-8" id="main">
+
+            <h2 id = "yourPosts"> Add Post: <h2> <br> <br>
+
+            <div id="post">
+
+            <?php
+            $host = "localhost";
+            $user = "85822294";
+            $password = "85822294";
+            $database = "db_85822294";
+
+            $connection = mysqli_connect($host, $user, $password, $database);
+        
+        
+            $error = mysqli_connect_error();
+            if($error != null)
+            {
+              $output = "<p>Unable to connect to database!</p>";
+              exit($output);
+        
+        
+            }else{
+            // $method = ($_SERVER['REQUEST_METHOD']);
+            if(isset($_POST['submit'])){
+                //insert comment into db
+                $pName = $_POST['pName'];
+                $postTitle = $_POST['pTitle'];
+                $post = $_POST['post'];
+                // $postID = $_GET['postID'];
+
+                $sql = "INSERT INTO posts(username, body, title) VALUES ('$pName','$post','$postTitle')";
+                $result = mysqli_query($connection, $sql);
+            };
+            }
+
+            ?>
+            <form  action ="" method ="post">
+                <label for="pName"> Name:</label><br>
+                <input type = "text" id='pName' title='pName' name='pName'> </input><br>
+                <label for="pTitle"> Post Title:</label><br>
+                <input type = "text" id='pTitle' title='pTitle' name='pTitle'> </input><br>
+                <label for="post">Add Post:</label>
+                <input type = "text" id='post' title='post' name='post'> </input><br>
+                <input type='submit' value="submit" name="submit" >
+            </form>
+            </div>
+
+            <br>
+
+
+
             <h3 id = "yourPosts">Your Posts</h3>  
             <?php
              $host = "localhost";

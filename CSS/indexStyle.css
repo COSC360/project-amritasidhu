@@ -151,14 +151,12 @@
   display: inline-block;
 }
 
-
-
 #yourPosts{
     position: absolute;
     font-family: 'Indie Flower';
     text-decoration: underline;
     left: 50%;
-    margin-top: 3%;
+    margin-top: 6%;
    
 }
 

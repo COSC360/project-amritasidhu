@@ -154,7 +154,7 @@
 
 
 #yourPosts{
-    position: absolute;
+    position: relative;
     font-family: 'Indie Flower';
     text-decoration: underline;
     left: 50%;
@@ -175,21 +175,41 @@
    
     
 }
+
 #comments {
-    position: absolute;
+
+    border:2px solid #b0afae ;
+    background-color: #83cde4;
+   
+    position: relative;
+    font-family: 'Indie Flower';
+
+    left: 35%;
+    top: 30%;
+    
+    margin-top: 2%;
+    /* position: absolute;
     font-family: 'Indie Flower';
     text-decoration: underline;
     
-    margin-top: 3%;
+    margin-top: 3%; */
     /* border:2px solid #b0afae ; */
 }
 #commentName {
 
     position: absolute;
     font-family: 'Indie Flower';
-    text-decoration: underline;
     left: 10%;
     margin-top: 3%;
+
+
+}
+#commentPost {
+
+    position: absolute;
+    font-family: 'Indie Flower';
+    left: 10%;
+    margin-top: 13%;
 
 
 }
