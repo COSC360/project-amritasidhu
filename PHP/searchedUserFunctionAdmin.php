@@ -11,10 +11,10 @@ ini_set('display_errors', '1');
 
 
 
-    $host = "localhost"; 
-    $database = "project"; 
-    $user = "webuser"; 
-    $password = "P@ssw0rd";
+    $host = "cosc360.ok.ubc.ca";
+    $user = "85822294";
+    $password = "85822294";
+    $database = "db_85822294";
 
 
     $connection = mysqli_connect($host, $user, $password, $database);
@@ -30,7 +30,7 @@ ini_set('display_errors', '1');
     }else{
     
         //good connection, so do you thing
-        $sql = "SELECT id, username FROM users WHERE username = '$searched_username'";
+        $sql = "SELECT * FROM users WHERE username = '$searched_username'";
 
         echo $sql;
     
@@ -54,7 +54,7 @@ ini_set('display_errors', '1');
     
     
 
-       header("Location: http://localhost:8082/project-amritasidhu/HTML/searchedUserAdmin.php");
+       header("Location: https://cosc360.ok.ubc.ca/amrita29/project-amritasidhu/HTML/searchedUserAdmin.php");
     
 
 ?>
